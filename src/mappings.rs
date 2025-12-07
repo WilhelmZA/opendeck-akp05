@@ -6,10 +6,10 @@ use mirajazz::{
 // Must match DeviceNamespace field in manifest.json
 pub const DEVICE_NAMESPACE: &str = "a5";
 
-// AKP05E series constants - accounting for encoder displays
-pub const ROW_COUNT: usize = 3;  // 2 rows of buttons + 1 row of encoders
-pub const COL_COUNT: usize = 5;  // 5 columns max (buttons row), encoders will be subset
-pub const KEY_COUNT: usize = 10;
+// AKP05E series constants - custom layout: 10 physical buttons + 4 touchscreen zones
+pub const ROW_COUNT: usize = 2;  // 2 rows of physical buttons only
+pub const COL_COUNT: usize = 5;  // 5 columns for physical buttons
+pub const KEY_COUNT: usize = 10; // Back to 10 physical buttons for main grid
 pub const ENCODER_COUNT: usize = 4;
 
 #[derive(Debug, Clone)]

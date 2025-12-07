@@ -67,106 +67,170 @@
        y="0"
        rx="8.4395905"
        ry="8.9756813" />
+    <!-- Top row - 5 buttons -->
     <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3"
-       width="10.353844"
-       height="10.353844"
-       x="4.9335485"
-       y="17.698322"
-       rx="1"
-       ry="1" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3-3"
-       width="10.353844"
-       height="10.353844"
-       x="17.756626"
-       y="17.698322"
-       rx="1"
-       ry="1" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3-3-1"
-       width="10.353844"
-       height="10.353844"
-       x="30.579702"
-       y="17.698322"
-       rx="1"
-       ry="1" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3-36"
-       width="10.353844"
-       height="10.353844"
-       x="4.9335485"
-       y="30.607693"
-       rx="1"
-       ry="1" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3-3-0"
-       width="10.353844"
-       height="10.353844"
-       x="17.756626"
-       y="30.607693"
-       rx="1"
-       ry="1" />
-    <rect
-       style="fill:#ffffff;stroke-width:0.342431"
-       id="rect3-3-1-6"
-       width="10.353844"
-       height="10.353844"
-       x="30.579699"
-       y="30.607693"
-       rx="1"
-       ry="1" />
-    <circle
        style="fill:#ffffff;stroke-width:0.264583"
-       id="path3"
-       cx="10.11047"
-       cy="47.688084"
-       r="2.0543513" />
-    <circle
+       id="rect_top_1"
+       width="8.5"
+       height="8.5"
+       x="8.616"
+       y="8"
+       rx="1"
+       ry="1" />
+    <rect
        style="fill:#ffffff;stroke-width:0.264583"
-       id="path3-7"
-       cx="22.933548"
-       cy="47.688084"
-       r="2.0543513" />
-    <circle
+       id="rect_top_2"
+       width="8.5"
+       height="8.5"
+       x="19.116"
+       y="8"
+       rx="1"
+       ry="1" />
+    <rect
        style="fill:#ffffff;stroke-width:0.264583"
-       id="path3-3"
-       cx="35.756618"
-       cy="47.688084"
-       r="2.0543513" />
-    <circle
-       style="fill:#ffffff;stroke-width:0.219619"
-       id="path4"
-       cx="55.017483"
-       cy="25.424156"
-       r="7.8190508" />
-    <circle
+       id="rect_top_3"
+       width="8.5"
+       height="8.5"
+       x="29.616"
+       y="8"
+       rx="1"
+       ry="1" />
+    <rect
        style="fill:#ffffff;stroke-width:0.264583"
-       id="path5"
-       cx="50.191574"
-       cy="45.518517"
-       r="2.9788094" />
-    <circle
+       id="rect_top_4"
+       width="8.5"
+       height="8.5"
+       x="40.116"
+       y="8"
+       rx="1"
+       ry="1" />
+    <rect
        style="fill:#ffffff;stroke-width:0.264583"
-       id="path5-2"
-       cx="59.857723"
-       cy="45.518517"
-       r="2.9788094" />
+       id="rect_top_5"
+       width="8.5"
+       height="8.5"
+       x="50.616"
+       y="8"
+       rx="1"
+       ry="1" />
+    <!-- Second row - 5 buttons -->
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect_mid_1"
+       width="8.5"
+       height="8.5"
+       x="8.616"
+       y="19"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect_mid_2"
+       width="8.5"
+       height="8.5"
+       x="19.116"
+       y="19"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect_mid_3"
+       width="8.5"
+       height="8.5"
+       x="29.616"
+       y="19"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect_mid_4"
+       width="8.5"
+       height="8.5"
+       x="40.116"
+       y="19"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#ffffff;stroke-width:0.264583"
+       id="rect_mid_5"
+       width="8.5"
+       height="8.5"
+       x="50.616"
+       y="19"
+       rx="1"
+       ry="1" />
+    <!-- Touchscreen as 4 buttons -->
+    <rect
+       style="fill:#333333;stroke:#ffffff;stroke-width:0.5"
+       id="touch_1"
+       width="12.625"
+       height="6"
+       x="8.616"
+       y="30"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#333333;stroke:#ffffff;stroke-width:0.5"
+       id="touch_2"
+       width="12.625"
+       height="6"
+       x="21.241"
+       y="30"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#333333;stroke:#ffffff;stroke-width:0.5"
+       id="touch_3"
+       width="12.625"
+       height="6"
+       x="33.866"
+       y="30"
+       rx="1"
+       ry="1" />
+    <rect
+       style="fill:#333333;stroke:#ffffff;stroke-width:0.5"
+       id="touch_4"
+       width="12.625"
+       height="6"
+       x="46.491"
+       y="30"
+       rx="1"
+       ry="1" />
+    <!-- Bottom row - 4 encoders -->
+    <circle
+       style="fill:#666666;stroke:#ffffff;stroke-width:0.5"
+       id="knob_1"
+       cx="16.933"
+       cy="47"
+       r="3.5" />
+    <circle
+       style="fill:#666666;stroke:#ffffff;stroke-width:0.5"
+       id="knob_2"
+       cx="28.244"
+       cy="47"
+       r="3.5" />
+    <circle
+       style="fill:#666666;stroke:#ffffff;stroke-width:0.5"
+       id="knob_3"
+       cx="39.555"
+       cy="47"
+       r="3.5" />
+    <circle
+       style="fill:#666666;stroke:#ffffff;stroke-width:0.5"
+       id="knob_4"
+       cx="50.866"
+       cy="47"
+       r="3.5" />
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;text-align:start;writing-mode:lr-tb;direction:ltr;text-anchor:start;fill:#ffffff;stroke-width:0.264583"
-       x="19.667362"
+       style="font-size:5.64444px;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#ffffff;stroke-width:0.264583"
+       x="33.866"
        y="59.794682"
        id="text5"><tspan
          sodipodi:role="line"
          id="tspan5"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';stroke-width:0.264583"
-         x="19.667362"
-         y="59.794682">AKP03 / N3</tspan></text>
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:'Fira Sans';-inkscape-font-specification:'Fira Sans';text-anchor:middle;stroke-width:0.264583"
+         x="33.866"
+         y="59.794682">AKP05</tspan></text>
   </g>
 </svg>
