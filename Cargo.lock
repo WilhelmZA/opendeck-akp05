@@ -519,8 +519,8 @@ dependencies = [
 ]
 
 [[package]]
-name = "opendeck-akp03"
-version = "0.7.4"
+name = "opendeck-akp05"
+version = "1.0.0"
 dependencies = [
  "data-url",
  "futures-lite",

@@ -1,0 +1,8 @@
+# udev rules for Ajazz AKP05 series devices
+# This allows unprivileged access to AKP05 series devices
+
+# USB device rules for AKP05 series
+SUBSYSTEM=="usb", ATTRS{idVendor}=="0300", ATTRS{idProduct}=="3004", MODE="0660", TAG+="uaccess"  # AKP05E
+
+# HID raw device rules for AKP05 series  
+KERNEL=="hidraw*", SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0300", ATTRS{idProduct}=="3004", MODE="0660", TAG+="uaccess"  # AKP05E

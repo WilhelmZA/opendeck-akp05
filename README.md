@@ -1,8 +1,8 @@
 ![Plugin Icon](assets/icon.png)
 
-# OpenDeck Ajazz AKP03 / Mirabox N3 Plugin
+# OpenDeck Ajazz AKP05 Series Plugin
 
-An unofficial plugin for Mirabox N3-family devices
+An unofficial plugin for Ajazz AKP05 series devices
 
 ## OpenDeck version
 
@@ -10,16 +10,7 @@ Requires OpenDeck 2.5.0 or newer
 
 ## Supported devices
 
-- Ajazz AKP03 (0300:1001)
-- Ajazz AKP03E (0300:1002)
-- Ajazz AKP03R (0300:1003)
-- Ajazz AKP03E (rev. 2) (0300:3002)
-- Mirabox N3 (6602:1002)
-- Mirabox N3EN (6603:1003)
-- Soomfon Stream Controller SE (1500:3001)
-- Mars Gaming MSD-TWO (0B00:1001)
-- TreasLin N3 (5548:1001)
-- Redragon Skyrider SS-551 (0200:2000)
+- Ajazz AKP05E (0300:3004)
 
 ## Platform support
 
@@ -29,14 +20,14 @@ Requires OpenDeck 2.5.0 or newer
 
 ## Installation
 
-1. Download an archive from [releases](https://github.com/4ndv/opendeck-akp03/releases)
+1. Download an archive from [releases](https://github.com/WilhelmZA/opendeck-akp05/releases)
 2. In OpenDeck: Plugins -> Install from file
-3. Download [udev rules](./40-opendeck-akp03.rules) and install them by copying into `/etc/udev/rules.d/` and running `sudo udevadm control --reload-rules`
+3. Download [udev rules](./40-opendeck-akp05.rules) and install them by copying into `/etc/udev/rules.d/` and running `sudo udevadm control --reload-rules`
 4. Unplug and plug again the device, restart OpenDeck
 
 ## Adding new devices
 
-Read [this wiki page](https://github.com/4ndv/opendeck-akp03/wiki/Adding-support-for-new-devices) for more information.
+Read [this wiki page](https://github.com/WilhelmZA/opendeck-akp05/wiki/Adding-support-for-new-devices) for more information.
 
 ## Building
 

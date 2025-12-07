@@ -6,7 +6,7 @@ use tokio_util::sync::CancellationToken;
 
 use crate::{
     DEVICES, TOKENS,
-    mappings::{COL_COUNT, CandidateDevice, ENCODER_COUNT, KEY_COUNT, Kind, ROW_COUNT},
+    mappings::{CandidateDevice, Kind},
 };
 
 /// Initializes a device and listens for events
@@ -45,9 +45,9 @@ pub async fn device_task(candidate: CandidateDevice, token: CancellationToken) {
             .register_device(
                 candidate.id.clone(),
                 candidate.kind.human_name(),
-                ROW_COUNT as u8,
-                COL_COUNT as u8,
-                ENCODER_COUNT as u8,
+                candidate.kind.row_count() as u8,
+                candidate.kind.col_count() as u8,
+                candidate.kind.encoder_count() as u8,
                 0,
             )
             .await
@@ -101,8 +101,8 @@ pub async fn connect(candidate: &CandidateDevice) -> Result<Device, MirajazzErro
     let result = Device::connect(
         &candidate.dev,
         candidate.kind.protocol_version(),
-        KEY_COUNT,
-        ENCODER_COUNT,
+        candidate.kind.key_count(),
+        candidate.kind.encoder_count(),
     )
     .await;
 
@@ -180,6 +180,12 @@ pub async fn handle_set_image(device: &Device, evt: SetImageEvent) -> Result<(),
         (Some(position), Some(image)) => {
             log::info!("Setting image for button {}", position);
 
+            // Map software position to physical device position (device is upside down)
+            let kind = Kind::from_vid_pid(device.vid, device.pid).unwrap();
+            let physical_position = kind.map_button_index(position as usize) as u8;
+            
+            log::info!("Mapping software position {} to physical position {}", position, physical_position);
+
             // OpenDeck sends image as a data url, so parse it using a library
             let url = DataUrl::process(image.as_str()).unwrap(); // Isn't expected to fail, so unwrap it is
             let (body, _fragment) = url.decode_to_vec().unwrap(); // Same here
@@ -195,17 +201,18 @@ pub async fn handle_set_image(device: &Device, evt: SetImageEvent) -> Result<(),
 
             device
                 .set_button_image(
-                    position,
-                    Kind::from_vid_pid(device.vid, device.pid)
-                        .unwrap()
-                        .image_format(),
+                    physical_position,
+                    kind.image_format(),
                     image,
                 )
                 .await?;
             device.flush().await?;
         }
         (Some(position), None) => {
-            device.clear_button_image(position).await?;
+            // Map position for clearing as well
+            let kind = Kind::from_vid_pid(device.vid, device.pid).unwrap();
+            let physical_position = kind.map_button_index(position as usize) as u8;
+            device.clear_button_image(physical_position).await?;
             device.flush().await?;
         }
         (None, None) => {

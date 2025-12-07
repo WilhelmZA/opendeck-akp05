@@ -27,17 +27,28 @@ fn device_info_to_candidate(dev: HidDeviceInfo) -> Option<CandidateDevice> {
 /// Returns devices that matches known pid/vid pairs
 async fn get_candidates() -> Result<Vec<CandidateDevice>, MirajazzError> {
     log::info!("Looking for candidate devices");
+    log::info!("Using {} device queries", QUERIES.len());
 
     let mut candidates: Vec<CandidateDevice> = Vec::new();
 
-    for dev in list_devices(&QUERIES).await? {
+    let devices = list_devices(&QUERIES).await?;
+    log::info!("Found {} raw devices from queries", devices.len());
+
+    for dev in devices {
+        log::info!("Processing device: VID={:04x}, PID={:04x}, Serial={:?}", 
+                  dev.vendor_id, dev.product_id, dev.serial_number);
+        
         if let Some(candidate) = device_info_to_candidate(dev.clone()) {
+            log::info!("Successfully created candidate for device");
             candidates.push(candidate);
         } else {
+            log::warn!("Failed to create candidate for device VID={:04x}, PID={:04x}", 
+                      dev.vendor_id, dev.product_id);
             continue;
         }
     }
 
+    log::info!("Final candidates count: {}", candidates.len());
     Ok(candidates)
 }
 

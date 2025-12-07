@@ -1,7 +1,9 @@
 [package]
-name = "opendeck-akp03"
-version = "0.7.4"
+name = "opendeck-akp05"
+version = "0.1.0"
 edition = "2024"
+authors = ["WilhelmZa"]
+repository = "https://github.com/WilhelmZA/opendeck-akp05"
 
 [dependencies]
 data-url = "0.3.1"
